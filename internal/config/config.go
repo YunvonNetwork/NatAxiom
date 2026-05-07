@@ -302,12 +302,7 @@ func normalizeTunnelType(t string) string {
 	if t == "" {
 		return "tcp"
 	}
-	switch t {
-	case "tcp", "udp", "http", "https":
-		return t
-	default:
-		return t
-	}
+	return t
 }
 
 func (s ServerSettings) ReadTimeout() time.Duration {
